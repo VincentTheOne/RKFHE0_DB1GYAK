@@ -1,0 +1,14 @@
+Egy könyvet több hallgató is használ
+Egy hallgató több könyvet is használ
+Egy könyv egy könyvtárhoz tartozik
+Egy könyvtárhoz több könyv is tartozhat
+Egy könyvnek több szerzője is lehet
+Egy szerzőnek több könyve is lehet
+Egy könyvtár egy campushoz tartozik
+Egy campuson több könyvtár is lehet
+Egy szerzőnek több email címe is lehet
+Egy hallgatónak az elsődleges azonosítója a Neptunkód-ja
+Egy könyvnek az elsődleges azonosítója az ISBNszám-a
+Egy könyvtárnak az elsődleges azonosítója a K_kód
+Egy szerzőnek az elsődleges azonosítója az Sz_kód
+Egy campusnak az elsődleges azonosítója az Azonosító.
