@@ -1,0 +1,51 @@
+INSERT INTO Gyártóüzem VALUES (10,'Cogswell','44 E. West Street Ashland, OH 44805','3rd Series Cog','Gyártás');
+INSERT INTO Gyártóüzem VALUES (11,'Stoneworks','8779 Windsor St. Fuquay Varina, NC 27526','H shape metal profiles','Gyártás');
+INSERT INTO Gyártóüzem VALUES (12,'WrenchSupply','8551 St Margarets Road Seymour, IN 47274','Monkey Wrench series','Gyártás');
+INSERT INTO Gyártóüzem VALUES (13,'Crafftik','4001 Anderson Road, Nashville TN 37217','Teknik Metal Pipes','Gyártás');
+INSERT INTO Gyártóüzem VALUES (14,'Forma','7941 Alpine View Circle, Anchorage AK 99507','Screwdriver 2022 Models','Formatervezés');
+
+INSERT INTO Beszállító VALUES (1,'XYZLogistics','66645, Hong Kong, Main Street, 20',13,1000);
+INSERT INTO Beszállító VALUES (2,'GenericCég','12343, Budapest, Láma Utca, 12',9,1001);
+INSERT INTO Beszállító VALUES (3,'Pörköltszaftos KFT','3325, Semmiközepe, Fő Utca, 2',2,1002);
+INSERT INTO Beszállító VALUES (4,'Commodity Freight','5343, Glasgow, Liberty street, 3',20,1003);
+INSERT INTO Beszállító VALUES (5,'Oneway','2310, Split, Troglav ulica , 4',4,1004);
+
+INSERT INTO Termék VALUES (100,'Csavarhúzó minta','Screwdriver 2022 Models',100,'EUR');
+INSERT INTO Termék VALUES (101,'9mm acélcső','Teknik Metal Pipes',2000,'EUR');
+INSERT INTO Termék VALUES (102,'20mm acél profil','H shape metal profiles',50000,'HUF');
+INSERT INTO Termék VALUES (103,'12 fogú fogaskerék','3rd Series Cog',30,'EUR');
+INSERT INTO Termék VALUES (104,'40mm acélcső','Teknik Metal Pipes',4000,'EUR');
+
+INSERT INTO Megrendelés VALUES (1000,'Fémlap',500,'EUR','100db 1x1 méter fémlap');
+INSERT INTO Megrendelés VALUES (1001,'Acéltömb',1000000,'HUF','100db 100x50x30cm-es fémtömb');
+INSERT INTO Megrendelés VALUES (1002,'CNC gép',30000,'EUR','2022 CNC gép');
+INSERT INTO Megrendelés VALUES (1003,'Fémlap',600,'EUR','120db 1x1 méter fémlap');
+INSERT INTO Megrendelés VALUES (1004,'Raklap',1000,'EUR','10db 2x2 méteres raklap');
+INSERT INTO Megrendelés VALUES (1005,'Veszélyes hulladéktároló',60000,'HUF','6db veszélyes hulladéktároló szekrény');
+INSERT INTO Megrendelés VALUES (1006,'5x Headset',50000,'HUF','5db vezeték nélküli fejhallgató');
+INSERT INTO Megrendelés VALUES (1007,'Targonca',100000,'EUR','2db CAT targonca');
+
+INSERT INTO Raktár VALUES (10000,'Logisztika Depó','Miskolc',3501,'Józsikirály útja', 1,'500db raklap',1000,100);
+INSERT INTO Raktár VALUES (10001,'SzállítóCég KFT','Budapest',3303,'Út utca', 3,'1000db raklap',1001,101);
+INSERT INTO Raktár VALUES (10002,'Nemkreatívk ZRT','Debrecen',3202,'Névtelen utca', 10,'300db raklap',1002,102);
+INSERT INTO Raktár VALUES (10003,'Nemkreatívk ZRT','Debrecen',3202,'Névtelen utca', 10,'300db raklap',1003,103);
+INSERT INTO Raktár VALUES (10004,'Nemkreatívk ZRT','Debrecen',3202,'Névtelen utca', 10,'300db raklap',1004,104);
+
+INSERT INTO Vevő VALUES (100000,'Ferenc József','2543,Süttő,Hegedűs Gyula Utca 18','TEL:+3633809496',101);
+INSERT INTO Vevő VALUES (100002,'Kovács Béla','8986,Pusztaapáti,Nyár utca 6','TEL:+3692953034',102);
+INSERT INTO Vevő VALUES (100003,'Molnár Ferenc','4343,Bátorliget,Budaörsi út 22','TEL:+3642350785',103);
+INSERT INTO Vevő VALUES (100004,'Hegyi János','3711,Szirmabesenyő,Szent Gellért tér 29','TEL:+3646591385',104);
+INSERT INTO Vevő VALUES (100005,'Mocsári József','1027,Budapest,Csabai Kapu 14','TEL:+3652618389',100);
+
+INSERT INTO raktár_gyártóüzem VALUES (10000,10,'Gyártócég Kft');
+INSERT INTO raktár_gyártóüzem VALUES (10001,11,'Neves Multi Kft');
+INSERT INTO raktár_gyártóüzem VALUES (10002,12,'Gyártócég Kft');
+INSERT INTO raktár_gyártóüzem VALUES (10003,13,'Neves Multi Kft');
+INSERT INTO raktár_gyártóüzem VALUES (10004,14,'Gyártócég Kft');
+
+INSERT INTO megrendelés_raktár VALUES (1000,10000);
+INSERT INTO megrendelés_raktár VALUES (1001,10001);
+INSERT INTO megrendelés_raktár VALUES (1002,10002);
+INSERT INTO megrendelés_raktár VALUES (1003,10003);
+INSERT INTO megrendelés_raktár VALUES (1003,10004);
+

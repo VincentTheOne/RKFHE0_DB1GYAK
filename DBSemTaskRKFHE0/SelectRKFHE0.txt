@@ -1,0 +1,10 @@
+SELECT * FROM Megrendelés;
+SELECT * FROM Megrendelés WHERE pénznem = ’EUR’;
+SELECT Név, Cím FROM Gyártóüzem WHERE Osztály = 'Gyártás';
+SELECT Név,cím,járműflotta FROM Beszállító WHERE Járműflotta > 5;
+SELECT COUNT(pénznem) FROM Termék WHERE pénznem = 'eur';
+SELECT * FROM megrendelés ORDER BY ár;
+SELECT tétel,ár,település FROM megrendelés INNER JOIN Raktár WHERE település = 'Miskolc';
+SELECT AVG(ár) FROM Megrendelés WHERE pénznem = 'eur';
+SELECT MIN(ár) FROM termék;
+SELECT * FROM Megrendelés WHERE szállítmány_id BETWEEN 1002 AND 1005;

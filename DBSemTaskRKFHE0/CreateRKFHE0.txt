@@ -1,0 +1,62 @@
+CREATE TABLE Beszállító(
+Beszállító_id INT PRIMARY KEY,
+Név CHAR(50),
+Cím CHAR(100),
+Járműflotta INT,
+szállítmány_id INT,
+FOREIGN KEY (szállítmány_id) REFERENCES Megrendelés(szállítmány_id));
+
+CREATE TABLE Megrendelés(
+szállítmány_id INT PRIMARY KEY,
+tétel  CHAR(100),
+ár INT(10),
+pénznem CHAR(3),
+leírás BLOB(500));
+
+CREATE TABLE Megrendelés_Raktár(
+szállítmány_id INT,
+raktár_id INT,
+FOREIGN KEY(szállítmány_id) REFERENCES Megrendelés(szállítmány_id),
+FOREIGN KEY(raktár_id) REFERENCES Raktár(raktár_id));
+
+CREATE TABLE Raktár(
+raktár_id INT PRIMARY KEY,
+név CHAR(100),
+település CHAR(50),
+irsz INT(10),
+utca CHAR(50),
+házszám INT(3),
+kapacitás CHAR(30),
+szállítmány_id INT,
+termék_id INT,
+FOREIGN KEY (szállítmány_id) REFERENCES Megrendelés(szállítmány_id),
+FOREIGN KEY (termék_id) REFERENCES Termék(termék_id));
+
+CREATE TABLE Termék(
+termék_id INT PRIMARY KEY,
+megnevezés CHAR(50),
+termékcsalád CHAR(50),
+ár INT,
+pénznem CHAR(3));
+
+CREATE TABLE Vevő(
+vevő_id INT PRIMARY KEY,
+név CHAR(50),
+cím CHAR(50),
+elérhetőség CHAR(100),
+termék_id INT,
+FOREIGN KEY (termék_id) REFERENCES Termék(termék_id));
+
+CREATE TABLE Raktár_Gyártóüzem(
+raktár_id INT,
+gyártó_id INT,
+vállalatnév char(100),
+FOREIGN KEY (raktár_id) REFERENCES Raktár(raktár_id),
+FOREIGN KEY (gyártó_id) REFERENCES Gyártóüzem(gyártó_id));
+
+CREATE TABLE Gyártóüzem(
+gyártó_id INT PRIMARY KEY,
+név CHAR(100),
+cím CHAR(100),
+termékcsalád CHAR(50),
+osztály CHAR(50));
